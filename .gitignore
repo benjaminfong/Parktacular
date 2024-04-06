@@ -5,3 +5,4 @@ server/migrations/__pycache__/0003_alter_parkingfacility_options.cpython-310.pyc
 server/migrations/__pycache__/0004_alter_parkingfacility_options_and_more.cpython-310.pyc
 .idea/*
 env/
+Map/.idea/*
