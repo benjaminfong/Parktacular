@@ -5,6 +5,7 @@ price, location, opening time, distance, and in the future, previous crime histo
 
 ## How we built it
 We used React Vite for the front end and Django for the back end and server. 
+We used Azure SQL Database for parking lots data storage and retrieval. 
 We used a Jupyter notebook to perform the machine leaning model training. 
 
 ## Backend
