@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { GoogleMap, useJsApiLoader, MarkerF, InfoWindowF } from '@react-google-maps/api';
 import axios from 'axios';
 import "./map.css";
-import parkingLots from "./maps-data.json"
 
 
 // const sfBounds = {
@@ -15,13 +14,13 @@ import parkingLots from "./maps-data.json"
 const createNumberIcon = (number) => {
   const svg = encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
     <path fill="#ff3025" d="M45 1H5v40h15.093l5.439 8.05l5.44-8.05H45z"/>
-    <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" fill="white" font-size="15" font-family="Helvetica">${number}</text>
+    <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" fill="white" font-size="15" font-family="Helvetica">$ ${number}</text>
   </svg>`);
 
   return `data:image/svg+xml,${svg}`;
 };
 
-const getLatLong = async (address) => {
+export const getLatLong = async (address) => {
   try {
     const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json`, {
       params: {
@@ -39,7 +38,7 @@ const getLatLong = async (address) => {
 
 };
 
-const Map = ({ address, submitTrigger }) => {
+const Map = ({ places, address, submitTrigger }) => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: "AIzaSyB6rIDQSME3Qqstx1x4WDRUvBGMSSVJuNY"
@@ -49,18 +48,18 @@ const Map = ({ address, submitTrigger }) => {
 
   const [activeMarker, setActiveMarker] = useState(null)
 
-  const [places, setPlaces] = useState([]);
+  // const [places, setPlaces] = useState([]);
 
   const [center, setCenter] = useState({lat: 37.784, lng: -122.407})
 
 
-  const handleMarkerClick = (parkingLot) => {
-    setActiveMarker(parkingLot.id);
-    setCenter({lat: parseFloat(parkingLot.lat), lng: parseFloat(parkingLot.long)});
-  }
+  // const handleMarkerClick = (parkingLot) => {
+  //   setActiveMarker(parkingLot.id);
+  //   setCenter({lat: parseFloat(parkingLot.lat), lng: parseFloat(parkingLot.long)});
+  // }
 
   useEffect(() => {
-    setPlaces(parkingLots);
+    // setPlaces(parkingLots);
     if (address) {
       const fetchData = async () => {
         try {
@@ -102,12 +101,12 @@ const Map = ({ address, submitTrigger }) => {
                 <MarkerF 
                   key={parkingLot.id}
                   position={{lat: parseFloat(parkingLot.lat), lng: parseFloat(parkingLot.long)}}
-                  onClick={() => setActiveMarker(parkingLot.id)}
+                  onClick={() => setActiveMarker(parkingLot.price_per_hour)}
                   icon={
-                    {  url: createNumberIcon(parkingLot.id),
+                    {  url: createNumberIcon(parkingLot.price_per_hour),
                       scaledSize: new window.google.maps.Size(40, 35) }}
                 >
-                  { activeMarker === parkingLot.id ? 
+                  { activeMarker === parkingLot.price_per_hour ? 
                     <InfoWindowF onCloseClick={() => setActiveMarker(null)}>
                       <div>{parkingLot.facility_name}, {parkingLot.street_address}</div>
                     </InfoWindowF> : <></>

@@ -34,7 +34,7 @@ def parking_facility_list(request):
 
         # add optional conditions to Q object
         if time_param:
-            time_param = datetime.strptime(time_param, '%H:%M').time()
+            time_param = datetime.strptime(time_param + ':00', '%H:%M:%S').time()
             filter_conditions &= Q(open_hours__lte=time_param, close_hours__gte=time_param)
         if price_min_param:
             filter_conditions &= Q(price_per_hour__gte=price_min_param)
