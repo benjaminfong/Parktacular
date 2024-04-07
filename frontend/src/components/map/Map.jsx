@@ -12,6 +12,7 @@ import parkingLots from "./maps-data.json"
 //   west: -122.524,
 // }
 
+// https://icon-sets.iconify.design/map/square-pin/
 const createNumberIcon = (number) => {
   const svg = encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
     <path fill="#ff3025" d="M45 1H5v40h15.093l5.439 8.05l5.44-8.05H45z"/>
@@ -116,7 +117,7 @@ const Map = ({ address, submitTrigger }) => {
             ))}
       </GoogleMap>
       <div style={{ position: 'absolute', top: '10px', left: '10px', zIndex: 9999 }}>
-        <button className='center-btn' onClick={() => map.panTo(center)}>Center</button>
+        <button className='center-btn' onClick={() => map.panTo({lat: 37.784, lng: -122.407})}>Center</button>
       </div>
     </div>
   );
