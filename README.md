@@ -33,5 +33,6 @@ Please go to the frontend subdirectory, then run the following:<br>
 <code>npm run dev</code> -- start a local server
 
 ## What's next for Parktacular
-We hope to integrate the machine learning crime safety prediction in our website. Here is the machine learning model: <br>
-https://github.com/AnanyaAgarwal1997/hackathon.git
+We used XGBoost ML model to determine the likelihood of a particular type of crime occuring within the a location. 
+In the future, we hope to integrate this information on our page.<br>
+Please refer here:[XGBoost for crime prediction](https://github.com/AnanyaAgarwal1997/hackathon.git)
