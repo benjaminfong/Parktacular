@@ -1,0 +1,28 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header-area {
+  width: 100%;
+}
+
+.content-area {
+  display: flex;
+  width: 100%;
+}
+
+.map-area {
+  flex: 0.75;
+  flex-direction: column;
+}
+
+.filter-area {
+  flex: 0.25;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
