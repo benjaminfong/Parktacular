@@ -12,8 +12,8 @@ We used a Jupyter notebook to perform the machine leaning model training.
 Django server: <br><code>[path/to/]/Parktacular/cd backend</code><br>
 
 Create and activate a virtual environment:<br>
-<code>[path/to/]/Parktacular/python3 -m venv env[path/to/]/Parktacular/source env/bin/activate
-</code><br>
+<code>[path/to/]/Parktacular/python3 -m venv env</code><br>
+<code>[path/to/]/Parktacular/source env/bin/activate</code><br>
 It’s better to install an isolated python package in venv. To get all the packages you need to run the server:<br>
 <code>(env) [path/to/]/Parktacular/backend/pip install -r requirements.txt</code><br>
 <br>Make sure you have ODBC Driver 18 for SQL Server installed in your local environment. If you don’t have, follow this reference: https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16<br>
