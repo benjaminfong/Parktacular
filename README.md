@@ -1,7 +1,7 @@
 # PARKTACULAR
 
-Our team built a web app to improve upon SMFTA's parking map by providing various filters based on 
-price, location, opening time, distance, and in the future, probability predictions of different types of crime arount the parking facilities.
+Our team built a Web App to improve upon SMFTA's parking map by providing various filters based on 
+price, location, opening time, distance, and probability predictions of different types of crime arount the parking facilities using ML.
 
 ## How we built it
 We used React Vite for the front end and Django for the back end and server. <br>
