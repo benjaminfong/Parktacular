@@ -9,7 +9,7 @@ We used Azure SQL Database for parking lots data storage and retrieval.
 We used a Jupyter notebook to perform the machine leaning model training. 
 
 ## Backend
-Django server: <code>[path/to/]/Parktacular/cd backend</code><br>
+Django server: <br><code>[path/to/]/Parktacular/cd backend</code><br>
 
 Create and activate a virtual environment:
 <code>[path/to/]/Parktacular/python3 -m venv env[path/to/]/Parktacular/source env/bin/activate
