@@ -33,5 +33,5 @@ Please go to the frontend subdirectory, then run the following:<br>
 <code>npm run dev</code> -- start a local server
 
 ## What's next for Parktacular
-We hope to display the price and hours of operation in the UI as well as integrate the machine learning crime safety prediction in our website. Here is the machine learning model: <br>
+We hope to integrate the machine learning crime safety prediction in our website. Here is the machine learning model: <br>
 https://github.com/AnanyaAgarwal1997/hackathon.git
