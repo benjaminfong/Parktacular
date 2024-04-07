@@ -18,7 +18,7 @@ It’s better to install an isolated python package in venv. To get all the pack
 <code>(env) [path/to/]/Parktacular/backend %pip install -r requirements.txt</code><br>
 Make sure you have ODBC Driver 18 for SQL Server installed in your local environment. If you don’t have, follow this reference: https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16<br>
 In the root of backend folder, run this command to start the server: <br>
-<code>(env) [path/to/]/Parktacular/python manage.py runserver </code>
+<code>(env) [path/to/]/Parktacular/python manage.py runserver </code><br>
 If you see “Starting development server at http://127.0.0.1:8000/“ on the terminal, the server is started successfully! You can quit the server with CONTROL-C. 
 
 ## Frontend
