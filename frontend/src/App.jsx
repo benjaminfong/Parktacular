@@ -79,17 +79,20 @@ function App() {
 
       // handleAddressSubmit(address); // set address data
 
-      const { lat, lng } = await getLatLong(address);
+      if (address != '') {
+        const { lat, lng } = await getLatLong(address);
   
-      if (lat != undefined && lng != undefined) {
-        params.long = lng;
-        params.lat = lat;
+        if (lat != undefined && lng != undefined) {
+          params.long = lng;
+          params.lat = lat;
       }
 
-      // set distance to params
-      if (distance != undefined && distance != "") {
-        params.distance = distance;
+        // set distance to params
+        if (distance != undefined && distance != "") {
+          params.distance = distance;
+        }
       }
+      
 
       // Construct the URL with parameters
       const queryString = new URLSearchParams(params).toString();
