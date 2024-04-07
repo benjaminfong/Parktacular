@@ -18,7 +18,7 @@ It’s better to install an isolated python package in venv. To get all the pack
 <code>(env) [path/to/]/Parktacular/backend/pip install -r requirements.txt</code><br>
 <br>Make sure you have ODBC Driver 18 for SQL Server installed in your local environment. If you don’t have, follow this reference: https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16<br>
 <br>In the root of backend folder, run this command to start the server: <br>
-<code>(env) [path/to/]/Parktacular/backend/python manage.py runserver </code><br>
+<code>(env) [path/to/]/Parktacular/backend/python manage.py runserver </code><br><br>
 If you see “Starting development server at http://127.0.0.1:8000/“ on the terminal, the server is started successfully! You can quit the server with CONTROL-C. 
 
 ## Frontend
@@ -33,4 +33,5 @@ Please go to the frontend subdirectory, then run the following:<br>
 <code>npm run dev</code> -- start a local server
 
 ## What's next for Parktacular
-We hope to display the price and hours of operation in the UI as well as integrate the machine learning crime safety prediction in our website.
+We hope to display the price and hours of operation in the UI as well as integrate the machine learning crime safety prediction in our website. Here is the machine learning model: <br>
+https://github.com/AnanyaAgarwal1997/hackathon.git
