@@ -1,6 +1,6 @@
 from django.db import models
-from django.contrib.gis.db import models as geomodels
-from django.contrib.gis.geos import Point
+# from django.contrib.gis.db import models as geomodels
+# from django.contrib.gis.geos import Point
 
 
 # Create your models here.
@@ -19,15 +19,9 @@ class ParkingFacility(models.Model):
     open_hours = models.TimeField(blank=True, null=True)
     facility_type = models.TextField(db_column='FACILITY_TYPE', blank=True, null=True)
     owner = models.TextField(db_column='OWNER', blank=True, null=True)
-    shape = models.TextField(blank=True, null=True)
+
 
     class Meta:
         # managed = False
         db_table = 'sfmta_managed_offstreet_parking_20240328'
 
-
-    def location(self):
-        if self.lat is not None and self.long is not None:
-            # Explicitly convert Decimal to float
-            return Point(float(self.long), float(self.lat), srid=4326)
-        return None

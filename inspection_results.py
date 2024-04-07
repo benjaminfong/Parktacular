@@ -184,6 +184,7 @@ class SfmtaManagedOffstreetParking20240328(models.Model):
     price_per_hour = models.DecimalField(max_digits=18, decimal_places=0, blank=True, null=True)
     close_hours = models.TimeField(blank=True, null=True)
     open_hours = models.TimeField(blank=True, null=True)
+    geopoints = models.TextField(db_column='geoPoints', blank=True, null=True)  # Field name made lowercase. This field type is a guess.
 
     class Meta:
         managed = False
