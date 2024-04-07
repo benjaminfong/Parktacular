@@ -4,19 +4,19 @@ Our team built a web app to improve upon SMFTA's parking interface by providing 
 price, location, opening time, distance, and in the future, previous crime history.
 
 ## How we built it
-We used React Vite for the front end and Django for the back end and server. 
-We used Azure SQL Database for parking lots data storage and retrieval. 
+We used React Vite for the front end and Django for the back end and server. <br>
+We used Azure SQL Database for parking lots data storage and retrieval. <br>
 We used a Jupyter notebook to perform the machine leaning model training. 
 
 ## Backend
 Django server: <br><code>[path/to/]/Parktacular/cd backend</code><br>
 
-Create and activate a virtual environment:
+Create and activate a virtual environment:<br>
 <code>[path/to/]/Parktacular/python3 -m venv env[path/to/]/Parktacular/source env/bin/activate
 </code><br>
 It’s better to install an isolated python package in venv. To get all the packages you need to run the server:<br>
 <code>(env) [path/to/]/Parktacular/backend %pip install -r requirements.txt</code><br>
-Make sure you have ODBC Driver 18 for SQL Server installed in your local environment. If you don’t have, follow this reference: https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16<br>
+<br>Make sure you have ODBC Driver 18 for SQL Server installed in your local environment. If you don’t have, follow this reference: https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16<br>
 In the root of backend folder, run this command to start the server: <br>
 <code>(env) [path/to/]/Parktacular/python manage.py runserver </code><br>
 If you see “Starting development server at http://127.0.0.1:8000/“ on the terminal, the server is started successfully! You can quit the server with CONTROL-C. 
